@@ -1,4 +1,6 @@
-# Plan de telefonía móvil
+# Ejercicio realizado en clase de programación 1, 2026 #
+
+# Plan de telefonía móvil #
 
 plan = input("Ingrese el plan seleccionado (Basico, Plus o Pro): ")
 gb_consumidos = float(input("Ingrese la cantidad de GB consumidos: "))
