@@ -1,4 +1,11 @@
-peso = float(input("Ingrese el peso del paquete en kg: "))
+peso = float(input("Peso del paquete (kg): "))
+destino = input("Destino (N = nacional, I = internacional): ")
 costo = 2500
-costo = costo + (peso - 5) * 800
-print("El costo de envío es: $", costo)
+if peso > 5:
+    costo = costo + (peso - 5) * 800
+if destino == "I":
+    costo = costo * 3
+elif destino != "N":
+    costo = 0
+    print("Destino no válido")
+print("Costo del envío:", costo)
