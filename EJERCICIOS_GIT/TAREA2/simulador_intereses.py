@@ -1,3 +1,12 @@
+# Nombre del estudiante: Glenn Perez Rodriguez
+# Contexto seleccionado: Simulador de ahorro con interés compuesto
+# Descripción: Calculo de ahorro mensual con interes compuesto
+# definiendo un ahora inicia, taza mensual, monto mensual
+# a ahorrar y meta de ahorro.
+# Fecha : 19-10-2026
+# version: 1.2
+
+
 # Constantes
 MAX_PERIOD = 120
 MONTHS_PER_YEAR = 12
@@ -17,13 +26,14 @@ display_frequency = input(
     "¿Desea ver el estado de cuenta mensual o anual? "
 ).strip().lower()
 
+# ciclo de validación de frecuencia de visualización
 while display_frequency not in ("mensual", "anual"):
     print("Frecuencia de visualización no válida. Vuelva a intentarlo.")
     display_frequency = input(
         "¿Desea ver el estado de cuenta mensual o anual? "
     ).strip().lower()
 
-# Cálculos
+# Cálculos y ciclo de ahorro con interés compuesto
 balance = saving_initial
 
 while balance < saving_goal and month < MAX_PERIOD:
@@ -41,6 +51,7 @@ while balance < saving_goal and month < MAX_PERIOD:
         # Muestra el saldo anual o si termina anticipadamente.
         print("Mes:", month, "Balance:", round(balance, 2))
 
+# condicional muestra si se alcanzó la meta o no y el balance final
 if balance >= saving_goal:
     print(
         "Meta alcanzada en el mes", month,
